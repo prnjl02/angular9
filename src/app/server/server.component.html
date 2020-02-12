@@ -1,1 +1,9 @@
-<h1>pranjal verma</h1>
+<!-- <input type="text" [(ngModel)]="username">
+<p>{{username}}</p>
+<button class="btn btn-primary" [disabled]="username === ''" (click)="clickme()">ClickMe</button> -->
+
+<button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret password=tuna</p>
+<div *ngFor="let logItems of log"
+      [ngStyle]="{backgroundColor:logItems>=5?'blue':'transparent'}"
+      [ngClass]="{'white-text':logItems>=5}">{{logItems}}</div>
